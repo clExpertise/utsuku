@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d0e22">
+  <title>UTSUKU – Bientôt disponible</title>
+  <meta name="description" content="UTSUKU arrive bientôt. Laisse ton e-mail pour être prévenu dès l’ouverture.">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/lineicons.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<div class="stars" id="stars" aria-hidden="true"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="moon" viewBox="0 0 100 100">
+    <mask id="cut"><rect width="100" height="100" fill="#fff"/><circle cx="66" cy="38" r="34" fill="#000"/></mask>
+    <circle cx="50" cy="54" r="38" fill="#ffd98a" mask="url(#cut)"/>
+    <circle cx="80" cy="24" r="7" fill="#ff8fb8"/>
+  </symbol>
+</svg>
+
+<div id="intro" role="dialog" aria-label="Introduction">
+  <div class="intro-word" aria-label="UTSUKU">
+    <span>UTSU</span><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#moon"/></svg><span>KU</span>
+  </div>
+  <button id="skip" type="button">passer l’intro</button>
+</div>
+
+<header class="bar">
+  <a class="brand" href="#top"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#moon"/></svg><span>UTSUKU</span></a>
+  <div class="bar-right">
+    <div class="social" id="social"></div>
+    <a class="btn" href="#top" data-focus-email>Me prévenir</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <svg class="hero-moon" viewBox="0 0 100 100" aria-hidden="true"><use href="#moon"/></svg>
+    <div class="hero-inner">
+      <span class="pill">Bientôt disponible</span>
+      <h1>UTSUKU</h1>
+      <p class="sub">Quelque chose de beau se prépare. Laisse ton e-mail et sois prévenu dès l’ouverture.</p>
+
+      <form class="signup" id="signup" novalidate>
+        <label class="sr-only" for="email">Adresse e-mail</label>
+        <input type="email" id="email" name="email" placeholder="ton@email.com" autocomplete="email" required>
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn pink">Me prévenir</button>
+      </form>
+      <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee-track" id="track"></div></div>
+
+  <section id="programme">
+    <div class="section-head reveal">
+      <h2>Ce qui arrive</h2>
+      <p>On finit les derniers détails. Voici ce qui t’attend.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal"><h3>Un univers soigné</h3><p>Chaque détail est pensé pour être beau et agréable à regarder.</p></article>
+      <article class="card reveal"><h3>Simple à utiliser</h3><p>Tout est clair dès la première visite, sans rien avoir à apprendre.</p></article>
+      <article class="card reveal"><h3>Prévenu en premier</h3><p>Laisse ton e-mail : tu reçois un message le jour de l’ouverture.</p></article>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="box reveal">
+      <h2>Ne rate pas l’ouverture</h2>
+      <p>Inscris-toi en une seconde ou suis-nous pour ne rien manquer.</p>
+      <div class="cta" id="contact-links"><a class="btn" href="#top" data-focus-email>Me prévenir</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© <span id="year"></span> UTSUKU</span>
+  <a href="#top">Haut de page ↑</a>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
